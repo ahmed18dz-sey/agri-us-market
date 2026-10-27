@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
-  Tractor, Sprout, ShieldCheck, MapPin, Search, DollarSign, 
-  ShoppingCart, Building2, CheckCircle, Truck, Wrench, 
+  Truck, Sprout, ShieldCheck, MapPin, Search, DollarSign, 
+  ShoppingCart, Building2, CheckCircle, Wrench, 
   Calculator, UserCheck, Star, ArrowRight, Package, AlertCircle 
 } from 'lucide-react';
 
@@ -10,7 +10,6 @@ export default function AgriUSMarketplace() {
   const [currency, setCurrency] = useState('USD');
   const [exchangeRates] = useState({ USD: 1, EUR: 0.92, SAR: 3.75, DZD: 134.5, AED: 3.67 });
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
   
   const [platformCommission, setPlatformCommission] = useState(3.5);
   const [activeVendorsCount, setActiveVendorsCount] = useState(124);
@@ -127,7 +126,7 @@ export default function AgriUSMarketplace() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => setActiveTab('home')}>
             <div className="bg-emerald-600 text-white p-2 rounded-xl flex items-center justify-center shadow-md">
-              <Tractor className="w-6 h-6" />
+              <Truck className="w-6 h-6" />
             </div>
             <div>
               <h1 className="text-xl font-black tracking-tight text-emerald-900">AgriUS<span className="text-amber-600">Market</span></h1>
