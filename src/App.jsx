@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-import { 
-  Truck, Sprout, ShieldCheck, MapPin, Search, DollarSign, 
-  ShoppingCart, Building2, CheckCircle, Wrench, 
-  Calculator, UserCheck, Star, ArrowRight, Package, AlertCircle 
-} from 'lucide-react';
 
 export default function AgriUSMarketplace() {
   const [activeTab, setActiveTab] = useState('home');
@@ -103,7 +98,7 @@ export default function AgriUSMarketplace() {
       {/* Top Trust Banner */}
       <div className="bg-emerald-900 text-emerald-100 text-xs py-2 px-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <ShieldCheck className="w-4 h-4 text-amber-400" />
+          <span>🛡️</span>
           <span>Verified US Farmers & Dealers Network | 3 Free Listings with Profile Verification</span>
         </div>
         <div>
@@ -125,8 +120,8 @@ export default function AgriUSMarketplace() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => setActiveTab('home')}>
-            <div className="bg-emerald-600 text-white p-2 rounded-xl flex items-center justify-center shadow-md">
-              <Truck className="w-6 h-6" />
+            <div className="bg-emerald-600 text-white p-2 rounded-xl flex items-center justify-center shadow-md text-lg">
+              🚜
             </div>
             <div>
               <h1 className="text-xl font-black tracking-tight text-emerald-900">AgriUS<span className="text-amber-600">Market</span></h1>
@@ -144,9 +139,9 @@ export default function AgriUSMarketplace() {
           <div className="flex items-center gap-3">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="relative bg-slate-100 hover:bg-slate-200 p-2.5 rounded-full transition"
+              className="relative bg-slate-100 hover:bg-slate-200 p-2.5 rounded-full transition text-sm"
             >
-              <ShoppingCart className="w-5 h-5 text-slate-700" />
+              🛒
               {cart.length > 0 && (
                 <span className="absolute -top-1 -right-1 bg-amber-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
                   {cart.length}
@@ -157,7 +152,7 @@ export default function AgriUSMarketplace() {
               onClick={() => setActiveTab('sell')}
               className="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow transition flex items-center gap-2"
             >
-              <UserCheck className="w-4 h-4" /> Get Verified (3 Free)
+              ✅ Get Verified (3 Free)
             </button>
           </div>
         </div>
@@ -174,7 +169,7 @@ export default function AgriUSMarketplace() {
                 <p className="text-slate-300 text-sm md:text-base">Buy and sell heavy tractors, precision drones, irrigation systems, and farm supplies directly from verified US dealers with secure Pay on Delivery & Freight Integration.</p>
                 <div className="flex flex-wrap gap-3 pt-2">
                   <button onClick={() => setActiveTab('market')} className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl shadow transition flex items-center gap-2">
-                    Browse Equipment <ArrowRight className="w-4 h-4" />
+                    Browse Equipment ➡️
                   </button>
                 </div>
               </div>
@@ -197,7 +192,7 @@ export default function AgriUSMarketplace() {
                     <div className="p-4 space-y-2">
                       <h3 className="font-bold text-slate-900 text-base">{item.title}</h3>
                       <div className="flex items-center gap-1 text-slate-500 text-xs">
-                        <MapPin className="w-3.5 h-3.5" />
+                        <span>📍</span>
                         <span>{item.location}</span>
                       </div>
                     </div>
@@ -207,7 +202,7 @@ export default function AgriUSMarketplace() {
                       onClick={() => { setCart([...cart, item]); setIsModalOpen(true); }}
                       className="w-full mt-3 bg-slate-900 hover:bg-emerald-600 text-white text-xs font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-2"
                     >
-                      <ShoppingCart className="w-4 h-4" /> Request Quote / Buy
+                      🛒 Request Quote / Buy
                     </button>
                   </div>
                 </div>
